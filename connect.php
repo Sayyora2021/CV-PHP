@@ -3,12 +3,14 @@ include './contact.php';
 
 if(isset($_POST["nom"]) && isset($_POST["email"]) && isset($_POST["phone"]))
 {
+    //on récupère les name de html
     $nom=$_POST["nom"];
     $email=$_POST["email"];
     $phone=$_POST["phone"];
+    $text=$_POST["textarea"];
 
-
-    $req = mysqli_query($link, "insert into user (nom, email, tel) values ('$nom','$email', '$phone') ");
+//on envoit à DB ->table
+    $req = mysqli_query($link, "insert into user (nom, email, tel, msg) values ('$nom','$email', '$phone', '$text') ");
 
     if($req){
         echo "insertion effectuée";
@@ -17,11 +19,5 @@ if(isset($_POST["nom"]) && isset($_POST["email"]) && isset($_POST["phone"]))
         echo "erreur d'insertion";
     }
 }
-
-
-
-
-
-
 
 ?>

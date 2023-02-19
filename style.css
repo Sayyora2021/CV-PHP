@@ -57,9 +57,18 @@ p {
   font-family: "Chivo Mono", monospace;
   text-align: justify;
 }
-p > span {
-  color: gold;
+
+.box {
+  background-color: #cfc696;
+  padding: 5px;
+  border-radius: 5px;
+  color: black;
+  transition: transform 3s;
 }
+.box:hover {
+  transform: scale(1.1);
+}
+
 .contact {
   max-width: 600px;
   margin: auto;
