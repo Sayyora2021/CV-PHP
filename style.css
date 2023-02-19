@@ -74,3 +74,18 @@ p > span {
   border-radius: 0.4rem;
   width: 100%;
 }
+.btn-send {
+  width: 120px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+fieldset {
+  margin: 5%;
+}
+legend {
+  text-align: center;
+}

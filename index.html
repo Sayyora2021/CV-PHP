@@ -1,4 +1,3 @@
-<!-- contact.php -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,26 +48,30 @@
 </section>
     <div class="container">
 
-    <?php  ?>
-        <h3>On en <span>discute? 👩‍💻 </h3>
-        
-        <form>
+    
+               <!-- action envoit les information à la php -connect.php ici, envoie avec POST ou GET-->
+        <form method="POST" action="connect.php" >
+            <fieldset>
+            <legend><h3>On en <span>discute? 👩‍💻 </h3></legend>
             <div class="contact">
-            <label for="name" class="form-label">Prénom et nom</label>
-                <input type="text" placeholder="Prénom et nom" required class="form-label"></input>
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Votre mail" aria-describedby="email-help">
+            <label for="name">Votre prénom et nom</label>
+                <input type="text" name="nom" placeholder="Prénom et nom" required></input>
+                <label for="email" >Email</label>
+                <input type="text"  id="email" name="email" placeholder="Votre mail" aria-label="email">
+                <label for="email" >Téléphone</label>
+                <input type="number"  id="phone" name="phone" placeholder="Votre télephone" aria-label="télephone">
                 <!-- <div id="email-help" class="form-text">Nous ne revendrons pas votre email.</div> -->
             <!-- </div> -->
             <div class="mb-3">
-                <label for="message" class="form-label">Votre message</label>
+                <label for="message" >Message</label>
                 <textarea class="form-control" id="message" cols="30" rows="10" placeholder="Exprimez vous" id="message" name="textarea"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Envoyer</button>
+            <button type="submit" class="btn-send" value="Valider">Envoyer</button>
+</fieldset>
         </form>
         <br />
     </div>
 
-    <?php  ?>
+    <!-- <?php  include('footer.php')?> -->
 </body>
 </html>
