@@ -1,7 +1,7 @@
 <?php
 include './contact.php';
 
-if(isset($_POST["nom"]) && isset($_POST["email"]) && isset($_POST["phone"]))
+if(isset($_POST["nom"]) && isset($_POST["email"]) && isset($_POST["phone"]) && isset($_POST["textarea"]))
 {
     //on récupère les name de html
     $nom=$_POST["nom"];
